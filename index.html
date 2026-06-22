@@ -104,7 +104,7 @@
   .ava i{font-size:5px;font-weight:800;letter-spacing:.3px;color:#1b1b1b;font-style:normal;margin-top:1px;}
   .stack{display:flex;flex-direction:column;gap:6px;min-width:0;max-width:78%;}
   .brow{display:flex;align-items:flex-end;gap:6px;}
-  .bubble{background:#fff;border-radius:4px 18px 18px 18px;padding:12px 15px;font-size:15px;color:#1b1f24;line-height:1.55;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+  .bubble{background:#fff;border-radius:4px 18px 18px 18px;padding:12px 15px;font-size:15px;color:#283b52;line-height:1.55;box-shadow:0 1px 2px rgba(0,0,0,.05);}
   .bubble.linkmsg{color:#3b7de0;text-decoration:underline;word-break:break-all;}
   .stamp{font-size:11px;color:#6b7178;white-space:nowrap;padding-bottom:2px;}
   .cardmsg{background:#fff;border-radius:4px 14px 14px 14px;box-shadow:0 1px 2px rgba(0,0,0,.05);display:flex;gap:10px;padding:12px 13px;align-items:flex-start;}
@@ -128,14 +128,15 @@
   }
   .promo::before{display:none;}
   .promo .small{font-size:9px;position:relative;margin-bottom:3px;letter-spacing:.02em;}
-  .promo .big{font-size:10px;font-weight:800;position:relative;letter-spacing:.04em;line-height:1.15;}
+  .promo .big{font-size:19px;font-weight:800;position:relative;letter-spacing:.04em;line-height:1.15;}
   .promo .cta{position:relative;margin-top:9px;background:#fff;color:#222;border-radius:15px;font-size:9px;font-weight:700;padding:6px 11px;width:max-content;cursor:pointer;}
   .promo .cta:active{background:#eee;}
   .tiles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #eee;}
-  .tile{padding:20px 0 16px;display:flex;flex-direction:column;align-items:center;gap:10px;border-right:1px solid #eee;}
+  .tile{padding:20px 0 16px;display:flex;flex-direction:column;align-items:center;gap:10px;border-right:1px solid #eee;color:#1a1a1a;}
   .tile:last-child{border-right:0;}
-  .tile svg{width:50px;height:50px;color:#111;}
-  .tile b{font-size:11px;letter-spacing:.14em;font-weight:300;color:#111;}
+  .tile svg{width:50px;height:50px;}
+  .tile b{font-size:14px;letter-spacing:.12em;font-weight:400;color:inherit;}
+  .tiles .tile:nth-child(2),.tiles .tile:nth-child(3){color:#6f4e37;}
   .tile span{font-size:11px;color:#444;}
   .menubar{height:56px;display:flex;align-items:center;justify-content:center;gap:8px;border-top:1px solid #eee;color:#3a3f45;font-weight:700;font-size:17px;}
   .kbd{position:absolute;left:16px;width:34px;height:30px;border:1.5px solid #c7ccd1;border-radius:7px;display:flex;align-items:center;justify-content:center;}
