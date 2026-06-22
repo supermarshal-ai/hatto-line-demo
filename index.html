@@ -138,8 +138,9 @@
   .tile b{font-size:14px;letter-spacing:.12em;font-weight:400;color:inherit;}
   .tiles .tile:nth-child(2),.tiles .tile:nth-child(3){color:#2e2017;}
   .tile span{font-size:11px;color:#444;}
-  .menubar{height:56px;display:flex;align-items:center;justify-content:center;gap:8px;border-top:1px solid #eee;color:#3a3f45;font-weight:700;font-size:17px;}
-  .kbd{position:absolute;left:16px;width:34px;height:30px;border:1.5px solid #c7ccd1;border-radius:7px;display:flex;align-items:center;justify-content:center;}
+  .menubar{height:56px;display:flex;align-items:center;justify-content:center;gap:8px;border-top:1px solid #eee;color:#3a3f45;font-weight:700;font-size:17px;position:relative;}
+  .safebar{height:0;}
+  .kbd{position:absolute;left:16px;top:0;bottom:0;margin-top:auto;margin-bottom:auto;width:34px;height:30px;border:1.5px solid #c7ccd1;border-radius:7px;display:flex;align-items:center;justify-content:center;}
   .kbd svg{width:18px;height:18px;color:#9aa0a6;}
 
   /* ---------- 2. DIM + SPINNER over chat ---------- */
@@ -250,9 +251,9 @@
   /* ===== real phone: drop the device frame, go full-screen ===== */
   @media (max-width:520px){
     html,body{position:fixed;inset:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none;}
-    body{padding:0;gap:0;background:#000;}
+    body{padding:0;gap:0;background:#fff;}
     .lead,.controls{display:none;}
-    .phone{width:100vw;height:100dvh;max-width:none;border-radius:0;padding:0;box-shadow:none;}
+    .phone{width:100%;height:100%;max-width:none;border-radius:0;padding:0;box-shadow:none;}
     .screen{border-radius:0;}
     .island{display:none;}
     .statusbar{height:auto;padding:calc(env(safe-area-inset-top) + 10px) 26px 8px;}
@@ -260,7 +261,7 @@
     .liff-bar{padding-top:calc(env(safe-area-inset-top) + 52px);}
     .m-bar{padding-top:calc(env(safe-area-inset-top) + 52px);}
     .m-bar .x{top:calc(env(safe-area-inset-top) + 50px);}
-    .menubar{height:auto;min-height:54px;padding-bottom:calc(env(safe-area-inset-bottom) + 4px);}
+    .safebar{height:env(safe-area-inset-bottom);background:#fff;}
   }
 </style>
 </head>
@@ -364,6 +365,7 @@
             <div class="kbd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h6" stroke-linecap="round"/></svg></div>
             メニュー▾
           </div>
+          <div class="safebar"></div>
         </div>
       </div>
 
