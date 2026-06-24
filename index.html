@@ -554,7 +554,7 @@
           <div class="ml-empty">解約済みのメンバーシップはありません</div>
           <div class="ml-div"></div>
           <div class="ml-link"><span>お支払い方法</span><div class="chev-r">›</div></div>
-          <div class="ml-link"><span>購入履歴</span><div class="chev-r">›</div></div>
+          <div class="ml-link tap" id="ml-history"><span>購入履歴</span><div class="chev-r">›</div></div>
           <div class="ml-link"><span>ヘルプ</span><div class="chev-r">›</div></div>
         </div>
       </div>
@@ -671,6 +671,7 @@
   $('manage').addEventListener('click',e=>{ ripple(e); memlist.classList.add('show'); });
   // list → detail
   $('ml-acct').addEventListener('click',e=>{ ripple(e); memdetail.classList.add('show'); });
+  $('ml-history').addEventListener('click',e=>{ ripple(e); memdetail.classList.add('show'); });
   // detail back arrow → return to the list
   $('md-back').addEventListener('click',()=>memdetail.classList.remove('show'));
   // ✕ on either membership sheet → close both (back to the 会員証 page)
